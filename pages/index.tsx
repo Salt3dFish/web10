@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { Layout } from '../components/layout'
-import Display from '../components/VideoDisplay'
+import PhotoGallery from '../components/photogallery'
 
-
+const imgs=['/index/1.jpg','/index/2.jpg','/index/3.jpg','/index/4.jpg','/index/5.jpg','/index/6.jpg']
 
 const Home: NextPage = () => {
+
   return (
     <Layout>
       <Head>
@@ -13,12 +14,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/ico10.svg" />
       </Head>
       <h1>一零影像工作室</h1>
+      <PhotoGallery imgs={imgs} title='gallery' />
       <div>
-        <h2>画廊</h2>
-        <div className='gallery'>
-          <Display vsrc='v1.mp4' />
-          <Display vsrc='v2.mp4' />
-        </div>
       </div>
       <style jsx>{`
         .gallery {

@@ -28,7 +28,9 @@ const Contact_Num = ({ imgname, text, width, height }: { imgname: string, text: 
   )
 }
 
-const Contact_QR = () => {
+
+
+const ContactWidget = () => {
   return (
     <div id="contact">
       <div>
@@ -77,7 +79,7 @@ const TeamInfo = () => {
 const SideWidget = () => {
   return (
     <div>
-      <a href='#contact'><img src={`${imgDir}/chatico.svg`}/></a>
+      <a href='#contact'><img src={`${imgDir}/chatico.svg`} /></a>
       <style jsx>{`
         a{
           display:block;
@@ -105,7 +107,7 @@ const About: NextPage = () => {
       <div className="main">
         <SideWidget />
         <TeamInfo />
-        <Contact_QR />
+        <ContactWidget />
       </div>
       <style jsx>{`
         .main{
